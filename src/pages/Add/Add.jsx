@@ -44,6 +44,9 @@ const response = await axios.post(`${url}/api/food/add`, formData);
     setImage(false)
     toast.success(response.data.message)
   }
+  else {
+    toast.error(response.data.message)
+  }
 }
 
   return (
