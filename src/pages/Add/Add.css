@@ -1,0 +1,110 @@
+/* Container */
+.add {
+  flex: 1;
+  background-color: #f9f9f9; /* light gray background for main content */
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Form Layout */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.add form {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Image Upload */
+.add-image-upload {
+  align-items: center;
+}
+
+.add-image-upload label {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: 0.3s ease;
+}
+
+.add-image-upload label:hover {
+  border-color: tomato; /* accent color */
+}
+
+.add-image-upload img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* Inputs & Selects */
+.add input,
+.add textarea,
+.add select {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.add input:focus,
+.add textarea:focus,
+.add select:focus {
+  border-color: tomato; /* same as sidebar accent */
+  outline: none;
+}
+
+.add textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+/* Category & Price in Row */
+.add-category-price {
+  display: flex;
+  gap: 20px;
+}
+
+.add-category-price > div {
+  flex: 1;
+}
+
+/* Labels */
+.add p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+/* Button */
+.add-btn {
+  background-color: tomato; /* matching sidebar accent color */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.add-btn:hover {
+  background-color: #cc2d3a;
+}
