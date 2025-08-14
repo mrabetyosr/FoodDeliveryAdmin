@@ -3,6 +3,7 @@ import './Add.css';
 import { assets } from '../../assets/assets';
 import { useState } from 'react';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Add = () => {
   const url="http://localhost:4000";
@@ -33,7 +34,7 @@ const onSubmitHandler = async (event) => {
   formData.append('price',Number(data.price));
   formData.append('category', data.category);
 const response = await axios.post(`${url}/api/food/add`, formData);
-  if (response.status.success){
+  if (response.data.success){
     setData({
       name: "",
       description: "",
@@ -41,10 +42,8 @@ const response = await axios.post(`${url}/api/food/add`, formData);
       category: 'Salad'
     })
     setImage(false)
+    toast.success(response.data.message)
   }
-  else{   
-
-     }
 }
 
   return (
